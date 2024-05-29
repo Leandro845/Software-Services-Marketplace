@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo_pagina %}
+    Group Revenue
+{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'css/budget.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+    <!-- Main content for the Group Revenue Maker Budget Request -->
+    <br><br>
+    <h1 style="text-align: center; color: #4a148c; font-size: 2.5rem;">Group Revenue Maker Budget Request</h1>
+
+    <main>
+        <section class="budget-section">
+            <!-- Group Revenue Maker Budget Information Section -->
+            <h2 style="color: #4a148c;">Group Revenue Maker Budget Information</h2>
+            <form id="group-revenue-maker-budget-form" action="{% url 'group_revenue_maker' %}" method="POST">
+                {% csrf_token %}
+
+                {% include 'parciais/_message.html' %}
+
+                <!-- Project Name Input -->
+                <div class="input-group">
+                    <label for="project-name">Project Name:</label>
+                    <input type="text" id="project_name" name="project-name" required>
+                </div>
+
+                <!-- Organization Name Input -->
+                <div class="input-group">
+                    <label for="organization-name">Organization Name:</label>
+                    <input type="text" id="organization-name" name="organization-name" required>
+                </div>
+
+                <!-- Group Size Input -->
+                <div class="input-group">
+                    <label for="group-size">Group Size:</label>
+                    <input type="number" id="group-size" name="group-size" min="1" required>
+                </div>
+
+                <!-- Revenue Goal Input -->
+                <div class="input-group">
+                    <label for="revenue-goal">Revenue Goal ($):</label>
+                    <input type="number" id="revenue-goal" name="revenue-goal" min="0" step="0.01" required>
+                </div>
+
+                <!-- Contact Name Input -->
+                <div class="input-group">
+                    <label for="contact-name">Contact Name:</label>
+                    <input type="text" id="contact-name" name="contact_name" required>
+                </div>
+
+                <!-- Contact Email Input -->
+                <div class="input-group">
+                    <label for="contact-email">Contact Email:</label>
+                    <input type="email" id="contact-email" name="contact_email" required>
+                </div>
+
+                <!-- Contact Phone Number Input -->
+                <div class="input-group">
+                    <label for="contact-phone">Contact Phone Number:</label>
+                    <input type="tel" id="contact-phone" name="contact_phone" required>
+                </div>
+
+                <!-- Additional Notes Input -->
+                <div class="input-group">
+                    <label for="additional-notes">Additional Notes:</label>
+                    <textarea id="additional-notes" name="additional_notes" rows="3"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Budget Request</button>
+            </form>
+        </section>
+    </main>
+{% endblock %}
+
+{% block add_script %}
+    <!-- Additional Script -->
+    <script src="{% static 'js/budget.js' %}" defer></script>
+{% endblock %}

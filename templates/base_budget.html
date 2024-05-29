@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" href="{% static 'css/budget_manager.css' %}">
+    
+    <!-- Placeholder for additional header content -->
+    {% block header_budget_manager %}{% endblock %}
+    
+    <!-- Title of the page -->
+    <title>Quote List</title>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <!-- Title of the page -->
+        <h1>Quote List</h1>
+    </header>
+
+    <!-- Navigation menu -->
+    <nav>
+        <ul>
+            <!-- Links to different budget management pages -->
+            <li><a href="{% url 'softwere_maker_budgets' %}">Software Maker</a></li>
+            <li><a href="{% url 'expense_management_maker_budget' %}">Expense Management Maker</a></li>
+            <li><a href="{% url 'group_revenue_maker_budget' %}">Group Revenue Maker</a></li>
+        </ul>
+    </nav>
+
+    <!-- Placeholder for page-specific content -->
+    {% block content %}{% endblock %}
+
+    <!-- JavaScript file for dynamic behavior -->
+    <script src="{% static 'js/budget_manager.js' %}" defer></script>
+    
+    <!-- Placeholder for additional JavaScript -->
+    {% block add_script_budget %}{% endblock %}
+
+</body>
+</html>

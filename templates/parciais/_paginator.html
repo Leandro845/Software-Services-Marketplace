@@ -1,0 +1,13 @@
+<div class="pagination" data-section="softweremaker">
+    <!-- Check if there is a previous page -->
+    {% if page_obj.has_previous %}
+        <!-- Button to go to the previous page -->
+        <button onclick="window.location.href='?page={{ page_obj.previous_page_number }}'">Previous</button>
+    {% endif %}
+
+    <!-- Check if there is a next page -->
+    {% if page_obj.has_next %}
+        <!-- Button to go to the next page -->
+        <button onclick="window.location.href='?page={{ page_obj.next_page_number }}'">Next</button>
+    {% endif %}
+</div>

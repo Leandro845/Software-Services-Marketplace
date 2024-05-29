@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Load CSS file for login page -->
+    <link rel="stylesheet" href="{% static 'css/login_page.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+
+        <!-- Include message partial for displaying messages -->
+        {% include 'parciais/_message.html' %}
+        <br>
+
+        <!-- Form for user login -->
+        <form action="{% url 'user_login' %}" method="POST">
+            {% csrf_token %}
+            <label for="usuario">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="senha">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Sign in</button>
+        </form>
+    </div>
+</body>
+</html>

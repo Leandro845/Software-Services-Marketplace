@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo_pagina %}
+We do
+{% endblock %}
+
+{% block header %}
+<!-- Link to custom CSS file -->
+<link rel="stylesheet" href="{% static 'css/afsd.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+<!-- Container for Software Development Process -->
+<div class="container process_section">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Title and description of Software Development Process -->
+            <div class="titlepage">
+                <h3>Software Development Process</h3>
+                <p>We follow a proven software development process to ensure the success of your project.</p>
+            </div>
+            <!-- Steps of Software Development Process -->
+            <div class="process_steps">
+                <div class="step">
+                    <span>1</span>
+                    <h4>Requirements Analysis</h4>
+                    <p>We understand your needs and objectives.</p>
+                </div>
+                <div class="step">
+                    <span>2</span>
+                    <h4>Design</h4>
+                    <p>We create an intuitive and efficient design.</p>
+                </div>
+                <div class="step">
+                    <span>3</span>
+                    <h4>Development</h4>
+                    <p>We develop software using the best technologies.</p>
+                </div>
+                <div class="step">
+                    <span>4</span>
+                    <h4>Testing</h4>
+                    <p>We ensure the quality and functionality of the software.</p>
+                </div>
+                <div class="step">
+                    <span>5</span>
+                    <h4>Deployment</h4>
+                    <p>We implement the software and provide ongoing support.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Request a Quote button for Software Development Process -->
+    <div class="row">
+        <div class="col-md-12">
+            <a class="read_more" href="{% url 'softwere_maker' %}">Request a Quote</a>
+        </div>
+    </div>
+</div>
+
+<!-- Container for Expense Management Maker Process -->
+<div class="container process_section">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Title and description of Expense Management Maker Process -->
+            <div class="titlepage">
+                <h3>Expense Management Maker Process</h3>
+                <p>We offer expense management solutions to optimize your company's financial control.</p>
+            </div>
+            <!-- Steps of Expense Management Maker Process -->
+            <div class="process_steps">
+                <div class="step">
+                    <span>1</span>
+                    <h4>Expense Analysis</h4>
+                    <p>We identify opportunities for expense optimization.</p>
+                </div>
+                <div class="step">
+                    <span>2</span>
+                    <h4>Solution Development</h4>
+                    <p>We develop customized tools for expense management.</p>
+                </div>
+                <div class="step">
+                    <span>3</span>
+                    <h4>Implementation</h4>
+                    <p>We implement the solution and provide training.</p>
+                </div>
+                <div class="step">
+                    <span>4</span>
+                    <h4>Monitoring and Support</h4>
+                    <p>We monitor and offer ongoing support for expense management.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Request a Quote button for Expense Management Maker Process -->
+    <div class="row">
+        <div class="col-md-12">
+            <a class="read_more" href="{% url 'expense_anagement_maker' %}">Request a Quote</a>
+        </div>
+    </div>
+</div>
+
+<!-- Container for Group Revenue Maker Process -->
+<div class="container process_section">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Title and description of Group Revenue Maker Process -->
+            <div class="titlepage">
+                <h3>Group Revenue Maker Process</h3>
+                <p>We develop solutions to maximize revenue and efficiency for your business group.</p>
+            </div>
+            <!-- Steps of Group Revenue Maker Process -->
+            <div class="process_steps">
+                <div class="step">
+                    <span>1</span>
+                    <h4>Financial Assessment</h4>
+                    <p>We analyze the financial structure of your group and identify areas for improvement.</p>
+                </div>
+                <div class="step">
+                    <span>2</span>
+                    <h4>Growth Strategies</h4>
+                    <p>We develop customized strategies to boost revenue growth.</p>
+                </div>
+                <div class="step">
+                    <span>3</span>
+                    <h4>Solution Implementation</h4>
+                    <p>We implement effective solutions to maximize the revenue of your business group.</p>
+                </div>
+                <div class="step">
+                    <span>4</span>
+                    <h4>Continuous Optimization</h4>
+                    <p>We provide ongoing support to optimize the efficiency and revenue of your group.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Request a Quote button for Group Revenue Maker Process -->
+    <div class="row">
+        <div class="col-md-12">
+            <a class="read_more" href="{% url 'group_revenue_maker' %}">Request a Quote</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

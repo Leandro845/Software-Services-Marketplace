@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo_pagina %}
+    Expense Management
+{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'css/budget.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+    <!-- Main content for the Expense Management Budget Request -->
+    <br><br>
+    <h1 style="text-align: center; color: #4a148c; font-size: 2.5rem;">Expense Management Budget Request</h1>
+
+    <main>
+        <section class="budget-section">
+            <!-- Expense Management Budget Section -->
+            <h2 style="color: #4a148c;">Expense Management Budget</h2>
+            <form id="expense-management-budget-form" action="{% url 'expense_anagement_maker' %}" method="POST">
+                {% csrf_token %}
+
+                {% include 'parciais/_message.html' %}
+
+                <!-- Company Name Input -->
+                <div class="input-group">
+                    <label for="company-name">Company Name:</label>
+                    <input type="text" id="company-name" name="company-name" required>
+                </div>
+
+                <!-- Contact Name Input -->
+                <div class="input-group">
+                    <label for="contact-name">Contact Name:</label>
+                    <input type="text" id="contact-name" name="contact-name" required>
+                </div>
+
+                <!-- Contact Email Input -->
+                <div class="input-group">
+                    <label for="contact-email">Contact Email:</label>
+                    <input type="email" id="contact-email" name="contact-email" required>
+                </div>
+
+                <!-- Contact Phone Number Input -->
+                <div class="input-group">
+                    <label for="contact-phone">Contact Phone Number:</label>
+                    <input type="tel" id="contact-phone" name="contact-phone" required>
+                </div>
+
+                <!-- Number of Employees Input -->
+                <div class="input-group">
+                    <label for="employees-number">Number of Employees:</label>
+                    <input type="number" id="employees-number" name="employees-number" min="1" required>
+                </div>
+
+                <!-- Budget Amount Input -->
+                <div class="input-group">
+                    <label for="budget-amount">Budget Amount ($):</label>
+                    <input type="number" id="budget-amount" name="budget-amount" min="0" step="0.01" required>
+                </div>
+
+                <!-- Additional Notes Input -->
+                <div class="input-group">
+                    <label for="additional-notes">Additional Notes:</label>
+                    <textarea id="additional-notes" name="additional-notes" rows="3"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Budget Request</button>
+            </form>
+        </section>
+    </main>
+{% endblock %}
+
+{% block add_script %}
+    <!-- Additional Script -->
+    <script src="{% static 'js/budget.js' %}" defer></script>
+{% endblock %}

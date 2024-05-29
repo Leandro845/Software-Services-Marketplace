@@ -1,0 +1,50 @@
+.process_section {
+    border: 2px solid purple; /* Borda roxa */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+    margin-top: 30px; /* Espaçamento superior */
+}
+
+.titlepage h3 {
+    color: purple; /* Cor do título */
+    margin-bottom: 20px; /* Espaçamento inferior do título */
+}
+
+.titlepage p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.step {
+    border-bottom: 2px solid #4a148c; /* Borda inferior para cada etapa */
+    padding-bottom: 20px; /* Espaçamento abaixo de cada etapa */
+}
+
+.step:last-child {
+    border-bottom: none; /* Remover a borda inferior da última etapa */
+}
+
+.step span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #4a148c;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.step h4 {
+    color: purple; /* Cor dos títulos das etapas */
+    margin-bottom: 10px; /* Espaçamento inferior dos títulos das etapas */
+}
+
+.step p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}

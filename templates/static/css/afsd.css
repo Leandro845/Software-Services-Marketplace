@@ -1,0 +1,141 @@
+/* Estilos adicionais para a página de detalhes do software */
+
+.software_details {
+    padding: 50px 0;
+}
+
+.software_details_text {
+    color: #333;
+    font-size: 18px; /* Aumenta o tamanho da fonte para o texto principal */
+}
+
+.software_img figure {
+    margin-bottom: 20px;
+}
+
+.process_steps {
+    margin-top: 30px;
+}
+
+.process_steps .step {
+    margin-bottom: 20px;
+}
+
+.titlepage h2, .titlepage h3 {
+    color: #4a148c;
+    font-size: 36px; /* Aumenta o tamanho da fonte para os títulos h2 e h3 */
+}
+
+.read_more {
+    display: inline-block;
+    padding: 15px 25px;
+    margin-top: 30px;
+    background-color: #7b1fa2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px; /* Aumenta o tamanho da fonte para o botão "Solicite um Orçamento" */
+}
+
+.read_more:hover {
+    background-color: #4a148c;
+}
+
+.process_section {
+    border: 2px solid purple; /* Borda roxa */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+    margin-top: 30px; /* Espaçamento superior */
+}
+
+.titlepage h3 {
+    color: purple; /* Cor do título */
+    margin-bottom: 20px; /* Espaçamento inferior do título */
+}
+
+.titlepage p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.step {
+    border-bottom: 2px solid purple; /* Borda inferior para cada etapa */
+    padding-bottom: 20px; /* Espaçamento abaixo de cada etapa */
+}
+
+.step:last-child {
+    border-bottom: none; /* Remover a borda inferior da última etapa */
+}
+
+.step span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: purple;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.step h4 {
+    color: purple; /* Cor dos títulos das etapas */
+    margin-bottom: 10px; /* Espaçamento inferior dos títulos das etapas */
+}
+
+.step p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.read_more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.read_more:hover {
+    background-color: darkpurple; /* Alterar a cor ao passar o mouse */
+
+.software_section {
+    border: 2px solid purple; /* Borda roxa */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+    margin-top: 30px; /* Espaçamento superior */
+}
+
+.software_section h2 {
+    color: purple; /* Cor do título */
+    margin-bottom: 20px; /* Espaçamento inferior do título */
+}
+
+.software_section p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.software_details_text h3 {
+    color: purple; /* Cor do título dos benefícios */
+    margin-top: 30px; /* Espaçamento superior do título dos benefícios */
+    margin-bottom: 10px; /* Espaçamento inferior do título dos benefícios */
+}
+
+.software_details_text ul {
+    list-style-type: disc; /* Marcadores de lista como bolinhas */
+    margin-left: 20px; /* Recuo da lista */
+}
+
+.software_details_text ul li {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}

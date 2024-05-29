@@ -1,0 +1,53 @@
+{% extends 'base_budget.html' %}
+
+{% block content %}
+<main>
+    <section id="grouprevenuemaker">
+        <h2>Group Revenue Maker</h2>
+        <div class="container">
+            <div class="search-bar">
+                <!-- Form for searching group revenue maker budgets -->
+                <form method="GET" action="{% url 'group_revenue_maker_budget' %}"> 
+                    <input type="text" name="search" placeholder="Search" value="{{ search_term }}">
+                    <button class="search-button" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Include paginator for navigation through pages -->
+        {% include 'parciais/_paginator.html' %}
+
+        <!-- Table for displaying group revenue maker budgets -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Organization Name</th>
+                    <th>Group Size</th>
+                    <th>Revenue Goal</th>
+                    <th>Contact Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Additional Notes</th>
+                </tr>
+            </thead>
+            <tbody id="grouprevenuemaker-table-body">
+                {% for project in page_obj %}
+                    <tr>
+                        <td>{{ project.project_name }}</td>
+                        <td>{{ project.organization_name }}</td>
+                        <td>{{ project.group_size }}</td>
+                        <td>{{ project.revenue_goal }}</td>
+                        <td>{{ project.contact_name_second }}</td>
+                        <td>{{ project.contact_email_second }}</td>
+                        <td>{{ project.contact_phone_second }}</td>
+                        <td>{{ project.additional_notes_second }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,13 @@
+version: '3.9'  # Specifies the Docker Compose file version
+
+services:  # Defines the services to be created
+
+  db_projects:  # Defines the PostgreSQL database service
+    image: postgres  # Specifies the Docker image to be used (official PostgreSQL image)
+    container_name: db_projects  # Specifies the name of the container
+    environment:  # Sets environment variables for the PostgreSQL container
+      POSTGRES_PASSWORD: minhaSenha  # Sets the password for the PostgreSQL user 'postgres'
+    ports:  # Exposes ports from the container to the host machine
+      - "5432:5432"  # Maps port 5432 on the host to port 5432 on the container
+    volumes:  # Mounts volumes from the host to the container
+      - ./data:/var/lib/postgresql/data  # Maps the local directory 'data' to the PostgreSQL data directory

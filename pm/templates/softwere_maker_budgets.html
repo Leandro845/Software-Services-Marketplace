@@ -1,0 +1,54 @@
+{% extends 'base_budget.html' %}
+{% load static %}
+
+{% block content %}
+<main>
+    <section id="softweremaker-section">
+        <h2>Software Maker</h2>
+        <div class="container">
+            <div class="search-bar">
+                <!-- Form for searching software maker budgets -->
+                <form method="GET" action="{% url 'softwere_maker_budgets' %}"> 
+                    <input type="text" name="search" placeholder="Search" value="{{ search_term }}">
+                    <button class="search-button" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Include paginator for navigation through pages -->
+        {% include 'parciais/_paginator.html' %}
+    
+        <!-- Table for displaying software maker budgets -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Description</th>
+                    <th>Requirements</th>
+                    <th>Duration</th>
+                    <th>Complexity</th>
+                    <th>Name/Surname</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="softweremaker-table-body">
+                {% for project in page_obj %}
+                    <tr>
+                        <td>{{ project.name }}</td>
+                        <td>{{ project.project_description }}</td>
+                        <td>{{ project.project_requirements }}</td>
+                        <td>{{ project.project_duration }}</td>
+                        <td>{{ project.project_complexity }}</td>
+                        <td>{{ project.name_surname }}</td>
+                        <td>{{ project.phone_number }}</td>
+                        <td>{{ project.email_client }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</main>
+{% endblock %}

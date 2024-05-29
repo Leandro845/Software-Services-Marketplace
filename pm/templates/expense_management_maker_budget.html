@@ -1,0 +1,51 @@
+{% extends 'base_budget.html' %}
+
+{% block content %}
+<main>
+    <section id="expensemanagementmaker">
+        <h2>Expense Management Maker</h2>
+        <div class="container">
+            <div class="search-bar">
+                <!-- Form for searching expense management maker budgets -->
+                <form method="GET" action="{% url 'expense_management_maker_budget' %}"> 
+                    <input type="text" name="search" placeholder="Search" value="{{ search_term }}">
+                    <button class="search-button" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Include paginator for navigation through pages -->
+        {% include 'parciais/_paginator.html' %}
+
+        <!-- Table for displaying expense management maker budgets -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Company Name</th>
+                    <th>Contact Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Number of Employees</th>
+                    <th>Budget Amount</th>
+                    <th>Additional Notes</th>
+                </tr>
+            </thead>
+            <tbody id="expensemanagementmaker-table-body">
+                {% for project in page_obj %}
+                    <tr>
+                        <td>{{ project.company_name }}</td>
+                        <td>{{ project.contact_name }}</td>
+                        <td>{{ project.contact_email }}</td>
+                        <td>{{ project.contact_phone }}</td>
+                        <td>{{ project.number_of_employees }}</td>
+                        <td>{{ project.budget_amount }}</td>
+                        <td>{{ project.additional_notes }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</main>
+{% endblock %}

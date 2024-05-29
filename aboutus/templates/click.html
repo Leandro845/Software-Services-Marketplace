@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo_pagina %}
+Softwere Maker
+{% endblock %}
+
+{% block header %}
+<!-- Link to custom CSS file -->
+<link rel="stylesheet" href="{% static 'css/afsd.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+<body class="main-layout">
+    <!-- Section: Software Maker Details -->
+    <section class="software_details">
+        <div class="container software_section">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Title and description of Software Maker -->
+                    <div class="titlepage text-center mb-5"> 
+                        <h2>Software Maker</h2>
+                        <p class="lead">Custom Software Solutions for Your Business</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center"> 
+                <!-- Image column -->
+                <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                    <div class="software_img">
+                        <!-- Illustrative images of custom software -->
+                        <img src="{% static 'images/imagem.jpg' %}" alt="Illustrative image of custom software" class="img-fluid rounded shadow-sm">
+                        <img src="{% static 'images/imagem2.png' %}" alt="Another illustrative image of custom software" class="img-fluid rounded shadow-sm mt-3">
+                    </div>
+                </div>
+                <!-- Text column -->
+                <div class="col-md-6 order-md-1">
+                    <div class="software_details_text">
+                        <!-- Description of Software Maker -->
+                        <p>At Maker, we specialize in developing custom software solutions that meet the specific needs of your business. We believe that software should adapt to your company, not the other way around.</p>
+                        <!-- Benefits of Custom Software -->
+                        <h3>Benefits of Custom Software:</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-primary mr-2"></i>Increased productivity and efficiency</li>
+                            <li><i class="fas fa-check-circle text-primary mr-2"></i>Improved competitiveness</li>
+                            <li><i class="fas fa-check-circle text-primary mr-2"></i>Cost reduction</li>
+                            <li><i class="fas fa-check-circle text-primary mr-2"></i>Integration with other systems</li>
+                            <li><i class="fas fa-check-circle text-primary mr-2"></i>Scalability and flexibility</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <br><br>
+        <!-- Container for Software Development Process -->
+        <div class="container process_section">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Title and description of Software Development Process -->
+                    <div class="titlepage">
+                        <h3>Software Development Process</h3>
+                        <p>We follow a proven software development process to ensure the success of your project.</p>
+                    </div>
+                    <!-- Steps of Software Development Process -->
+                    <div class="process_steps">
+                        <div class="step">
+                            <span>1</span>
+                            <h4>Requirements Analysis</h4>
+                            <p>We understand your needs and objectives.</p>
+                        </div>
+                        <div class="step">
+                            <span>2</span>
+                            <h4>Design</h4>
+                            <p>We create an intuitive and efficient design.</p>
+                        </div>
+                        <div class="step">
+                            <span>3</span>
+                            <h4>Development</h4>
+                            <p>We develop software using the best technologies.</p>
+                        </div>
+                        <div class="step">
+                            <span>4</span>
+                            <h4>Testing</h4>
+                            <p>We ensure the quality and functionality of the software.</p>
+                        </div>
+                        <div class="step">
+                            <span>5</span>
+                            <h4>Deployment</h4>
+                            <p>We implement the software and provide ongoing support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Request a Quote button for Software Development Process -->
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="read_more" href="{% url 'softwere_maker' %}">Request a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+{% endblock %}
+
+{% block add_script %}
+<!-- JavaScript file -->
+<script src="{% static 'js/scrt.js' %}"></script> 
+{% endblock %}

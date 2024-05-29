@@ -1,0 +1,62 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block titulo_pagina %}
+<span>About us</span>
+{% endblock %}
+
+{% block conteudo %}
+<!-- About Section -->
+<section id="about" class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6 text-center">
+            <div class="about-content">
+                <h2 class="section-title">Who We Are</h2>
+                <p class="section-description">
+                    We are a dedicated team of software makers striving to deliver cutting-edge solutions for businesses.
+                </p>
+                <p>
+                    Our mission is to transform ideas into impactful software products that drive innovation and growth.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="{% static 'images/asdde.jpeg' %}" alt="Team Photo" class="img-fluid about-image">
+        </div>
+    </div>
+</section>
+
+<section id="team" class="container mt-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h2 class="section-subtitle mb-4" style="text-align: center; color: #4a148c; font-size: 2.5rem;">Meet Our Team</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <!-- Team members -->
+        <div class="col-md-4 text-center mb-4">
+            <img src="{% static 'images/imagem_sem_foto.jpg' %}" alt="Team Member 1" class="img-fluid team-member">
+            <h4 class="mt-3">John Doe</h4>
+            <p>Chief Technology Officer</p>
+            <!-- Social media links -->
+            <ul class="social_team mt-3">
+                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://twitter.com/x"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="https://br.linkedin.com/"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <!-- Repeat similar structure for other team members -->
+    </div>
+</section>
+
+<!-- Other sections like 'values', 'mission', 'history' go here -->
+
+{% endblock %}
+
+{% block add_script %}
+<!-- Bootstrap JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

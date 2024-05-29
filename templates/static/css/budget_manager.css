@@ -1,0 +1,152 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #800080;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    padding: 2rem;
+}
+
+h2 {
+    color: #800080; /* Roxo */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden; /* Para esconder o overflow do input */
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 0; /* Remove o arredondamento do input */
+}
+
+.search-button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #800080; /* Roxo */
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0; /* Arredondamento apenas na direita */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: #333;
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+.project-details {
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.project-details h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+.project-details p {
+    margin: 0.5rem 0;
+}
+
+.complexity-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.complexity-button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.complexity-button.active {
+    background-color: #800080; /* Roxo */
+    color: #fff;
+}
+
+/* Distanciando as seções */
+section {
+    margin-bottom: 10rem; /* Adiciona espaço entre as seções */
+}
